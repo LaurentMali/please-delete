@@ -1,0 +1,81 @@
+= Zweites Sprint-Planning
+Linus Nestler
+1.0, 2023-11-07: Second Sprint
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+
+.Teilnehmer
+|===
+|anwesend | Abwesend
+
+|Linus Nestler
+|
+
+|
+|Laurent Mali
+
+|Armin Salkovic
+|
+
+
+|Abdullah Al-Desoky
+|
+
+|Oliver Daxinger
+|
+
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Htl-Leonding 4bhif
+
+|von-bis
+|Di. 2023-11-97 6. Einheit
+|Dauer
+|60 min
+|===
+
+== Besprochene Themen
+
+* OBD2 Sensor auslesen
+** Engine RPM
+** Vehicle Speed
+** Throttle Position
+* API kotlin
+* Periodisch(möglichst oft) OBD2 Daten in Db speichern
+** Daten erfassen läuft asynchron zu Daten speichern in DB
+** Datenbank
+** Oracle Cloud Ubuntu Server mit Quarkus
+*** InfluxDB /
+* Woran erkennt man, ob man sparsam fährt?
+** Daten sammeln
+** Daten speichern (Über Handy auf den DB)
+** Probefahrten machen (mal aggressiv, mal sparsam)
+
+== Vereinbarungen und Entscheidungen
+
+.Was wurde vereinbart?
+[%autowidth]
+|===
+|wer |macht was |bis wann
+
+| Linus, Oliver
+a|
+* OBD2 Sensor Daten auslesen
+** OBD2 API
+*** https://github.com/eltonvs/kotlin-obd-api[]
+* (Optional)GPS Position auslesen
+| 21.07.2023
+
+| Armin, Abdullah, Laurent
+a|
+* Oracle Cloud Server
+* Ubuntu mit Quarkus
+* DB PostgresDb
+| 21.07.2023

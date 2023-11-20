@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+
+class User{
+    id: Long
+    userName: String
+    password: String
+    ecoPoints: double
+}
+
+class Trip {
+    id: Long
+    distance: double
+    avgSpeed: double
+    avgEngineRotation: double
+    date: Date
+    rewardedEcoPoints: double
+}
+
+class CarData {
+    id: Long
+    tripId: UUID
+    longitude: double
+    latitude: double
+    currentEngineRPM: double
+    currentVelocity: double
+    throttlePosition: double
+    engineRunTime: String
+    timeStamp: Timestamp
+ }
+
+User "1" -- "*" Trip : > drives
+ CarData "*" -- "1"  Trip : < has
+@enduml

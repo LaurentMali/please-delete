@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+actor "Car Driver" as cd
+rectangle FahrverhaltenVergleichsplatform {
+  usecase "Compare with other users" as compareUsers
+  usecase "Calculate Eco-Points" as calculateEcoPoints
+  usecase "Track driven routes" as trackRoutes
+}
+cd -- compareUsers
+cd -- trackRoutes
+
+trackRoutes ..> calculateEcoPoints : <<include>>
+@enduml
